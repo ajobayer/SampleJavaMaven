@@ -1,6 +1,6 @@
 pipeline {
-    withEnv(['docker=/usr/local/bin/docker']) {
-        sh 'docker --version'
+    test {
+    sh '/usr/local/bin/docker --version'
     }
     agent {
         docker {
