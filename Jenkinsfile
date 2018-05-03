@@ -1,4 +1,7 @@
 pipeline {
+    withEnv(['docker=/usr/local/bin/docker']) {
+        sh 'docker --version'
+    }
     agent {
         docker {
             image 'maven:3.5.3-alpine' 
